@@ -19,6 +19,12 @@ object BuildValidation : BuildType({
     id("BuildValidation")
     name = "[1.0] Build Validation [AUTO]"
 
+    params {
+        param("OCTOPUS_GITHUB_USERNAME", "octopusden")
+        param("GITHUB_API_URL", "https://api.github.com")
+        param("OKD_IMAGE_NAME", "")
+    }
+
     vcs {
         root(AbsoluteId("Octopus_OctopusComponents_OctopusGithubVcsRoot"))
     }
